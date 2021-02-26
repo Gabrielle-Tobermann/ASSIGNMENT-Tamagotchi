@@ -1,12 +1,14 @@
 import '../styles/main.scss';
 import printToDom from './helpers/printToDom';
 
-let full = 100;
+let full = [100];
 const healthy = (e) => {
   if (e.target.id === 'healthy-btn') {
-    full += 10;
+    const lastIndex = full[full.length - 1];
+    const newValue = lastIndex + 10;
+    full.push(newValue);
+    document.querySelector('#full').innerHTML = full[full.length - 1];
   }
-  document.querySelector('#full').innerHTML = full;
 };
 
 const unhealthy = (e) => {
