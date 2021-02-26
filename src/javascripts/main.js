@@ -1,7 +1,7 @@
 import '../styles/main.scss';
 import printToDom from './helpers/printToDom';
 
-let full = [100];
+const full = [100];
 const healthy = (e) => {
   if (e.target.id === 'healthy-btn') {
     const lastIndex = full[full.length - 1];
@@ -13,9 +13,11 @@ const healthy = (e) => {
 
 const unhealthy = (e) => {
   if (e.target.id === 'unhealthy-btn') {
-    full -= 3;
+    const lastIndex = full[full.length - 1];
+    const newValue = lastIndex - 3;
+    full.push(newValue);
+    document.querySelector('#full').innerHTML = full[full.length - 1];
   }
-  document.querySelector('#full').innerHTML = full;
 };
 
 const eatButtons = () => {
