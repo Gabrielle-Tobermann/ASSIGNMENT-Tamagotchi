@@ -5,9 +5,12 @@ const full = [100];
 const healthy = (e) => {
   if (e.target.id === 'healthy-btn') {
     const lastIndex = full[full.length - 1];
-    const newValue = lastIndex + 10;
+    let newValue = lastIndex + 10;
+    if (newValue > 100) {
+      newValue = 100;
+    }
     full.push(newValue);
-    document.querySelector('#full').innerHTML = full[full.length - 1];
+    document.querySelector('#full').innerHTML = `Fullness Score: ${full[full.length - 1]}`;
   }
 };
 
@@ -16,12 +19,12 @@ const unhealthy = (e) => {
     const lastIndex = full[full.length - 1];
     const newValue = lastIndex - 3;
     full.push(newValue);
-    document.querySelector('#full').innerHTML = full[full.length - 1];
+    document.querySelector('#full').innerHTML = `Fullness Score: ${full[full.length - 1]}`;
   }
 };
 
 const eatButtons = () => {
-  const domString = `<div id="full">${full}</div><div><button type="button" class="btn btn-primary" id="healthy-btn">Healthy food</button><button type="button" class="btn btn-primary" id="unhealthy-btn">Unhealthy food</button></div>`;
+  const domString = `<div id="name">EAT</div><div id="full">Fullness Score: ${full}</div><div><button type="button" class="btn btn-primary" id="healthy-btn">Healthy food</button><button type="button" class="btn btn-primary" id="unhealthy-btn">Unhealthy food</button></div>`;
 
   printToDom('#eat', domString);
   document.querySelector('#healthy-btn').addEventListener('click', healthy);
