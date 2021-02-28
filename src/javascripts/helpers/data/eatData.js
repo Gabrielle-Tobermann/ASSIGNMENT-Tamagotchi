@@ -1,3 +1,21 @@
+const eatQuadrant = [
+  {
+    name: 'EAT',
+    button1: {
+      label: 'Healthy Food',
+      id: 'healthy-food'
+    },
+    button2: {
+      label: 'Unhealthy Food',
+      id: 'unhealthy-food'
+    },
+    score: {
+      type: 'Fullness',
+      val: 100
+    }
+  }
+];
+
 const full = [100];
 const healthy = (e) => {
   if (e.target.id === 'healthy-food') {
@@ -20,4 +38,6 @@ const unhealthy = (e) => {
   }
 };
 
-export { full, healthy, unhealthy };
+export {
+  eatQuadrant, full, healthy, unhealthy
+};
