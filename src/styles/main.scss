@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
   text-align: center;
@@ -17,26 +18,43 @@ body {
 .quad {
   width: 50%;
   border: solid 3px black;
-  padding-top: 25%;
-  padding-bottom: 25%;
+  height: 402px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-// #eat {
-//   width: 50%;
-//   height: 50%;
-// }
+#eat {
+  background-color: lightblue;
+}
 
-// #play {
-//   width: 50%;
-//   height: 50%
-// }
+#name--EAT {
+  font-size: 30px;
+}
 
-// #fight {
-//   width: 50%;
-//   height: 50%;
-// }
+#name--PLAY {
+  font-size: 30px;
+}
 
-// #sleep {
-//   width: 50%;
-//   min-height: 50%;
-// }
+#name--FIGHT {
+  font-size: 30px;
+}
+
+#name--SLEEP {
+  font-size: 30px;
+}
+  
+
+
+#play {
+  background-color: lightpink;
+}
+
+#fight {
+  background-color: palegreen;
+}
+
+#sleep {
+  background-color: lemonchiffon;
+}
