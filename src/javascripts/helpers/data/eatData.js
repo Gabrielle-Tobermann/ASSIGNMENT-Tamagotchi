@@ -1,5 +1,3 @@
-import progressUpdate from './progressData';
-
 const eatQuadrant = [
   {
     name: 'EAT',
@@ -28,7 +26,6 @@ const healthy = (e) => {
     }
     full.push(newValue);
     document.querySelector('#score--Fullness').innerHTML = `Fullness Score: ${full[full.length - 1]}`;
-    progressUpdate();
   }
 };
 
@@ -38,7 +35,6 @@ const unhealthy = (e) => {
     const newValue = lastIndex - 3;
     full.push(newValue);
     document.querySelector('#score--Fullness').innerHTML = `Fullness Score: ${full[full.length - 1]}`;
-    progressUpdate();
   }
 };
 

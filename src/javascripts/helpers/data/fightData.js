@@ -1,3 +1,5 @@
+// import progressUpdate from './progressData';
+
 const strength = [100];
 
 const fightQuadrant = [
@@ -27,6 +29,7 @@ const runAway = (e) => {
     }
     strength.push(newValue);
     document.querySelector('#score--Strength').innerHTML = `Strength Score: ${strength[strength.length - 1]}`;
+    // progressUpdate();
   }
 };
 
@@ -36,7 +39,10 @@ const fight = (e) => {
     const newValue = lastIndex - 10;
     strength.push(newValue);
     document.querySelector('#score--Strength').innerHTML = `Strength Score: ${strength[strength.length - 1]}`;
+    // progressUpdate();
   }
 };
 
-export { fightQuadrant, runAway, fight };
+export {
+  fightQuadrant, runAway, fight, strength
+};

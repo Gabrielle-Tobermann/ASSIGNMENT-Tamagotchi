@@ -1,3 +1,5 @@
+// import progressUpdate from './progressData';
+
 const playQuadrant = [
   {
     name: 'PLAY',
@@ -27,6 +29,7 @@ const funActivity = (e) => {
     }
     fun.push(newValue);
     document.querySelector('#score--Fun').innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
+    // progressUpdate();
   }
 };
 
@@ -39,8 +42,9 @@ const superFunActivity = (e) => {
     }
     fun.push(newValue);
     document.querySelector('#score--Fun').innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
-    console.warn(newValue);
   }
 };
 
-export { playQuadrant, funActivity, superFunActivity };
+export {
+  playQuadrant, funActivity, superFunActivity, fun
+};

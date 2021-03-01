@@ -6,9 +6,14 @@ import {
 import {
   playQuadrant, funActivity, superFunActivity
 } from './helpers/data/playData';
-import { fight, fightQuadrant, runAway } from './helpers/data/fightData';
-import { sleepQuadrant, nap, deepSlumber } from './helpers/data/sleepData';
+import {
+  fight, fightQuadrant, runAway
+} from './helpers/data/fightData';
+import {
+  sleepQuadrant, nap, deepSlumber
+} from './helpers/data/sleepData';
 import progressBuilder from './components/progressBuilder';
+import progressUpdate from './helpers/data/progressData';
 
 const quadBuilder = (arr, i, divId, callback1, callback2) => {
   let domString = '';
@@ -16,6 +21,8 @@ const quadBuilder = (arr, i, divId, callback1, callback2) => {
   printToDom(divId, domString);
   document.querySelector(`#${arr[i].button1.id}`).addEventListener('click', callback1);
   document.querySelector(`#${arr[i].button2.id}`).addEventListener('click', callback2);
+  document.querySelector(`#${arr[i].button1.id}`).addEventListener('click', progressUpdate);
+  document.querySelector(`#${arr[i].button2.id}`).addEventListener('click', progressUpdate);
 };
 
 const init = () => {
