@@ -6,6 +6,7 @@ import {
 import {
   playQuadrant, funActivity, superFunActivity
 } from './helpers/data/playData';
+import { fight, fightQuadrant, runAway } from './helpers/data/fightData';
 
 const quadBuilder = (arr, i, divId, callback1, callback2) => {
   let domString = '';
@@ -18,6 +19,7 @@ const quadBuilder = (arr, i, divId, callback1, callback2) => {
 const init = () => {
   quadBuilder(eatQuadrant, 0, '#eat', healthy, unhealthy);
   quadBuilder(playQuadrant, 0, '#play', funActivity, superFunActivity);
+  quadBuilder(fightQuadrant, 0, '#fight', runAway, fight);
 };
 
 init();

@@ -1,3 +1,5 @@
+const strength = [100];
+
 const fightQuadrant = [
   {
     name: 'FIGHT',
@@ -6,7 +8,7 @@ const fightQuadrant = [
       id: 'run-away'
     },
     button2: {
-      label:'Fight',
+      label: 'Fight',
       id: 'fight',
     },
     score: {
@@ -16,4 +18,25 @@ const fightQuadrant = [
   }
 ];
 
-export default fightQuadrant;
+const runAway = (e) => {
+  if (e.target.id === 'run-away') {
+    const lastIndex = strength[strength.length - 1];
+    let newValue = lastIndex + 1;
+    if (newValue > 100) {
+      newValue = 100;
+    }
+    strength.push(newValue);
+    document.querySelector('#score--strength').innerHTML = `Strength score: ${strength[strength.length - 1]}`;
+  }
+};
+
+const fight = (e) => {
+  if (e.target.id === 'fight') {
+    const lastIndex = strength[strength.length - 1];
+    const newValue = lastIndex - 10;
+    strength.push(newValue);
+    document.querySelector('#score--strength').innerHTML = `Strength score: ${strength[strength.length - 1]}`;
+  }
+};
+
+export { fightQuadrant, runAway, fight };
