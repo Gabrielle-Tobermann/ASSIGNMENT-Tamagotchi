@@ -3,6 +3,9 @@ import printToDom from './helpers/printToDom';
 import {
   eatQuadrant, healthy, unhealthy
 } from './helpers/data/eatData';
+import {
+  playQuadrant, funActivity, superFunActivity
+} from './helpers/data/playData';
 
 const quadBuilder = (arr, i, divId, callback1, callback2) => {
   let domString = '';
@@ -14,7 +17,7 @@ const quadBuilder = (arr, i, divId, callback1, callback2) => {
 
 const init = () => {
   quadBuilder(eatQuadrant, 0, '#eat', healthy, unhealthy);
-  // quadBuilder(quadrants, 1, '#play');
+  quadBuilder(playQuadrant, 0, '#play', funActivity, superFunActivity);
 };
 
 init();

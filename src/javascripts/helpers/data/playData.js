@@ -2,7 +2,7 @@ const playQuadrant = [
   {
     name: 'PLAY',
     button1: {
-      label:'Super Fun Activity',
+      label: 'Super Fun Activity',
       id: 'super-fun-act'
     },
     button2: {
@@ -21,19 +21,26 @@ const fun = [50];
 const funActivity = (e) => {
   if (e.target.id === 'super-fun-act') {
     const lastIndex = fun[fun.length - 1];
-    const newValue = lastIndex + 2;
+    let newValue = lastIndex + 2;
+    if (newValue > 100) {
+      newValue = 100;
+    }
     fun.push(newValue);
-    document.querySelector('#score--Fun').addEventListener.innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
+    document.querySelector('#score--Fun').innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
   }
 };
 
 const superFunActivity = (e) => {
   if (e.target.id === 'fun-act') {
     const lastIndex = fun[fun.length - 1];
-    const newValue = lastIndex + 50;
+    let newValue = lastIndex + 50;
+    if (newValue > 100) {
+      newValue = 100;
+    }
     fun.push(newValue);
-    document.querySelector('#score--Fun').addEventListener.innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
+    document.querySelector('#score--Fun').innerHTML = `Fun Score: ${fun[fun.length - 1]}`;
+    console.warn(newValue);
   }
 };
 
-export default playQuadrant;
+export { playQuadrant, funActivity, superFunActivity };
