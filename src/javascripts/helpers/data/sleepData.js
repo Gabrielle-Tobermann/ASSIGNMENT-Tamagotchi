@@ -12,7 +12,7 @@ const sleepQuadrant = [
       id: 'deep-slumber'
     },
     score: {
-      type: 'energy',
+      type: 'Energy',
       val: 50
     }
   }
@@ -26,7 +26,7 @@ const nap = (e) => {
       newValue = 100;
     }
     energy.push(newValue);
-    document.querySelector('#score--energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
   }
 };
 
@@ -38,7 +38,7 @@ const deepSlumber = (e) => {
       newValue = 100;
     }
     energy.push(newValue);
-    document.querySelector('#score--energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
   }
 };
 

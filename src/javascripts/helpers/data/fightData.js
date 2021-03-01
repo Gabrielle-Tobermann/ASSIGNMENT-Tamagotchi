@@ -12,7 +12,7 @@ const fightQuadrant = [
       id: 'fight',
     },
     score: {
-      type: 'strength',
+      type: 'Strength',
       val: 100
     }
   }
@@ -26,7 +26,7 @@ const runAway = (e) => {
       newValue = 100;
     }
     strength.push(newValue);
-    document.querySelector('#score--strength').innerHTML = `Strength score: ${strength[strength.length - 1]}`;
+    document.querySelector('#score--Strength').innerHTML = `Strength Score: ${strength[strength.length - 1]}`;
   }
 };
 
@@ -35,7 +35,7 @@ const fight = (e) => {
     const lastIndex = strength[strength.length - 1];
     const newValue = lastIndex - 10;
     strength.push(newValue);
-    document.querySelector('#score--strength').innerHTML = `Strength score: ${strength[strength.length - 1]}`;
+    document.querySelector('#score--Strength').innerHTML = `Strength Score: ${strength[strength.length - 1]}`;
   }
 };
 
