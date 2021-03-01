@@ -1,3 +1,5 @@
+// import progressUpdate from './progressData';
+
 const energy = [50];
 
 const sleepQuadrant = [
@@ -12,7 +14,7 @@ const sleepQuadrant = [
       id: 'deep-slumber'
     },
     score: {
-      type: 'energy',
+      type: 'Energy',
       val: 50
     }
   }
@@ -26,7 +28,8 @@ const nap = (e) => {
       newValue = 100;
     }
     energy.push(newValue);
-    document.querySelector('#score--energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    // progressUpdate();
   }
 };
 
@@ -38,8 +41,11 @@ const deepSlumber = (e) => {
       newValue = 100;
     }
     energy.push(newValue);
-    document.querySelector('#score--energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
+    // progressUpdate();
   }
 };
 
-export { sleepQuadrant, nap, deepSlumber };
+export {
+  sleepQuadrant, nap, deepSlumber, energy
+};
