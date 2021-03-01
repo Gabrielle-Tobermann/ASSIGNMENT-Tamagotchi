@@ -2,8 +2,41 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
-  color: brown;
   text-align: center;
-  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.quad {
+  width: 50%;
+  border: solid 3px black;
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
+// #eat {
+//   width: 50%;
+//   height: 50%;
+// }
+
+// #play {
+//   width: 50%;
+//   height: 50%
+// }
+
+// #fight {
+//   width: 50%;
+//   height: 50%;
+// }
+
+// #sleep {
+//   width: 50%;
+//   min-height: 50%;
+// }
