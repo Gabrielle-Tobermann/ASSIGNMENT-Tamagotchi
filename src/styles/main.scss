@@ -6,6 +6,7 @@ body {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(211, 219, 228);
 }
 
 #app {
@@ -17,8 +18,13 @@ body {
 #progress {
   width: 100%;
   justify-self: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
+}
+
+#progress-msg {
+  padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
 }
 
 .quad {
