@@ -1,9 +1,76 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  background-color: antiquewhite;
-  color: brown;
   text-align: center;
-  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(211, 219, 228);
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#progress {
+  width: 100%;
+  justify-self: center;
+  padding: 30px;
+}
+
+#progress-msg {
+  padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+}
+
+.quad {
+  width: 50%;
+  border: solid 3px black;
+  height: 300px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#eat {
+  background-color: lightblue;
+}
+
+#name--EAT {
+  font-size: 30px;
+}
+
+#name--PLAY {
+  font-size: 30px;
+}
+
+#name--FIGHT {
+  font-size: 30px;
+}
+
+#name--SLEEP {
+  font-size: 30px;
+}
+
+#play {
+  background-color: lightpink;
+}
+
+#fight {
+  background-color: palegreen;
+}
+
+#sleep {
+  background-color: rgb(252, 243, 161);
+}
+
+#pet {
+  height: 300px;
+  width: 300px;
+  padding-left: 100px;
 }
