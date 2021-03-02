@@ -17,7 +17,7 @@ import quadBuilder from '../components/quadBuilder';
 const initialScreen = () => {
   progressBuilder();
   quadBuilder(eatQuadrant, 0, '#eat', healthy, unhealthy);
-  quadBuilder(playQuadrant, 0, '#play', funActivity, superFunActivity);
+  quadBuilder(playQuadrant, 0, '#play', superFunActivity, funActivity);
   quadBuilder(fightQuadrant, 0, '#fight', runAway, fight);
   quadBuilder(sleepQuadrant, 0, '#sleep', nap, deepSlumber);
   petProfile();
