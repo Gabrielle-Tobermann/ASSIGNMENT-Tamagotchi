@@ -19,7 +19,7 @@ const playQuadrant = [
 const fun = [50];
 
 const funActivity = (e) => {
-  if (e.target.id === 'super-fun-act') {
+  if (e.target.id === 'fun-act') {
     const lastIndex = fun[fun.length - 1];
     let newValue = lastIndex + 2;
     if (newValue > 100) {
@@ -31,7 +31,7 @@ const funActivity = (e) => {
 };
 
 const superFunActivity = (e) => {
-  if (e.target.id === 'fun-act') {
+  if (e.target.id === 'super-fun-act') {
     const lastIndex = fun[fun.length - 1];
     let newValue = lastIndex + 50;
     if (newValue > 100) {
