@@ -1,5 +1,3 @@
-// import progressUpdate from './progressData';
-
 const energy = [50];
 
 const sleepQuadrant = [
@@ -29,7 +27,6 @@ const nap = (e) => {
     }
     energy.push(newValue);
     document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
-    // progressUpdate();
   }
 };
 
@@ -42,7 +39,6 @@ const deepSlumber = (e) => {
     }
     energy.push(newValue);
     document.querySelector('#score--Energy').innerHTML = `Energy Score: ${energy[energy.length - 1]}`;
-    // progressUpdate();
   }
 };
 
