@@ -1,6 +1,7 @@
-import '/Users/gabri/Desktop/tamagotchi.gif'
+import Tama from '../../../Tama.gif';
+
 const petProfile = () => {
-  const domImage = `<img src="${GinjiCloseup}" alt="Tamagotchi gif"/>`;
+  const domImage = `<div id="pet-image"><img src="${Tama}" alt="Tamagotchi gif"/></div>`;
   document.querySelector('#pet').innerHTML = domImage;
 };
 
